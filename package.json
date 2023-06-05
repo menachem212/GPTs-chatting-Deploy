@@ -1,0 +1,77 @@
+{
+  "name": "task",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node src/server/index1.js",
+    "dev-node":"watch src/server/index1.js",
+    "build": "run-p type-check build-only",
+    "compile": "babel src -d dist",
+    "test": "mocha tests",
+    "lint": "eslint src",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "deploy": "npm run build && railway up"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "build": "^0.1.4",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1",
+    "railway": "^2.0.17",
+    "readline": "^1.3.0",
+    "tailwindcss": "^3.3.2",
+    "text-encoding": "^0.7.0",
+    "vue": "^2.6.11",
+    "vue-clickaway": "^2.2.2",
+    "vue-fuse": "^2.1.0",
+    "vue-js-modal": "^1.3.31",
+    "vue-router": "^3.2.0",
+    "vuetify": "^2.2.11",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "material-design-icons-iconfont": "^6.1.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-vuetify": "~2.0.9",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.3.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
