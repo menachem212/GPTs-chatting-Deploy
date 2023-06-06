@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node src/server/index1.js",
     "dev-node":"watch src/server/index1.js",
-    "build": "run-p type-check build-only",
+    "build": "vercel",
     "compile": "babel src -d dist",
     "test": "mocha tests",
     "lint": "eslint src",
